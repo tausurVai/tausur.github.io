@@ -864,3 +864,99 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
         grid-column: span 1;
     }
 }
+
+/* New Stack Section Layout */
+.chart-split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.chart-container-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    border-right: 1px dashed var(--border);
+    padding-right: 4rem;
+}
+
+/* Right Side Styling */
+.tech-spec-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.spec-header {
+    margin-bottom: 1rem;
+}
+
+.spec-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.spec-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.spec-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
+    transition: width 1.5s ease-in-out;
+}
+
+.system-note {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: var(--bg);
+    border-left: 2px solid var(--accent);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.system-note i {
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.system-note p {
+    line-height: 1.4;
+    opacity: 0.8;
+}
+
+/* Responsive adjustment */
+@media (max-width: 900px) {
+    .chart-split-layout {
+        grid-template-columns: 1fr;
+    }
+    .chart-container-left {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px dashed var(--border);
+        padding-bottom: 4rem;
+    }
+}
